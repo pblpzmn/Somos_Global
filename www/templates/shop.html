@@ -1,0 +1,41 @@
+<ion-view view-title="Promociones: {{shop.name}}">
+    <ion-content ng-class="{expanded:isExpanded}">
+
+            <div ng-show="!{{hasProducts}}">
+                <ion-content class="has-header has-tabs-top padding">
+                    <h3 class="padding">No existen productos registrados para este local</h3>
+                </ion-content>
+            </div>
+            <div ng-show="{{hasProducts}}">
+
+                <div class="row" ng-repeat="imgs in references"> 
+                    <div class="column" >
+                        <div ng-if="imgs.idCg.idCg==82">
+                        <div class="card" >
+                            <div class="item item-text-wrap" >
+     
+                                <div class="item item-body">
+                                    
+                                        <img class="full-image" src="http://186.5.121.17:9090/cashback/imagenes/{{imgs.val1Ar}}">
+                                    
+                                </div>
+
+                            </div>
+                        
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </ion-content>
+<!-- 
+    <ion-infinite-scroll
+        on-infinite="loadMore()"
+        distance="1%">
+    </ion-infinite-scroll>
+ -->
+    <ion-footer-bar align-title="left" class="bar-positive">
+        <!--<h3 class="title">Somos Global</h3>-->
+    </ion-footer-bar>
+
+</ion-view>
